@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Result</title>
+</head>
+
+<body>
+    <h3>Login information</h3>
+    <p id="un"></p>
+    <p id="pw"></p>
+
+    <script>
+        let link = window.location.href;
+        let url = new URL(link);
+        document.getElementById("un").innerHTML = "Username: " + url.searchParams.get("username");
+        document.getElementById("pw").innerHTML = `Password: ${url.searchParams.get("password")}`;
+    </script>
+</body>
+
+</html>

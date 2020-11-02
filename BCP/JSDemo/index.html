@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        * {
+            padding: 0;
+        }
+        
+        table {
+            width: 100px;
+            height: 100px;
+        }
+        
+        td {
+            padding: 40px;
+        }
+        
+        .bgYellow {
+            background-color: yellow;
+        }
+        
+        .bgBack {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body style="color:red;" onload="init()">
+    <table border="1">
+        <tr>
+            <td class="bgYellow">&nbsp;</td>
+            <td class="bgBack">&nbsp;</td>
+            <td class="bgYellow">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="bgBack">&nbsp;</td>
+            <td class="bgYellow">&nbsp;</td>
+            <td class="bgBack">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="bgYellow">&nbsp;</td>
+            <td class="bgBack">&nbsp;</td>
+            <td class="bgYellow">&nbsp;</td>
+        </tr>
+    </table>
+    <input type="color" onchange="document.getElementsByTagName('body')[0].style.color= this.value;">
+    <br>
+    <button onmouseover="this.innerHTML = new Date()" onmouseout="this.innerHTML = 'Hover to show datatime'">Hover to show datatime</button>
+    <br>
+    <button onmouseover="document.getElementById('show').innerHTML = new Date()" onmouseout="document.getElementById('show').innerHTML = ''">Hover to show datatime</button>
+    <br>
+    <h3 id="show"></h3>
+    <br>
+    <select id="provinces" onchange="changeProvince()">
+        <option value="1">Thừa Thiên Huế</option>
+        <option value="2">Quảng Trị</option>
+        <option value="3">Quảng Bình</option>
+    </select>
+    <br>
+    <label for="">You have selected: </label> <input type="text" id="selectedText">
+    <input type="text" id="selectedValue">
+    <br>
+    <label for="">Resource</label> <input type="password" onkeydown="document.getElementById('terminator').value = this.value">
+    <br>
+    <label for="">Terminator</label> <input type="text" id="terminator">
+    <br>
+    <img src="" id="light">
+    <br>
+    <img src="" id="switch" width="100px" height="50px" alt="" onclick="controllLight()">
+
+
+    <script>
+        // function changeProvince() {
+        //     var select = document.getElementById('provinces');
+        //     document.getElementById('selectedText').value = select.options[select.selectedIndex].text;
+        //     document.getElementById('selectedValue').value = select.options[select.selectedIndex].value;
+        // }
+        // var isLightOn = false;
+
+        // function controllLight() {
+        //     if (isLightOn) {
+        //         document.getElementById("light").src = "images/lightOn.png";
+        //         document.getElementById("switch").src = "images/switchOff.png";
+        //     } else {
+        //         document.getElementById("light").src = "images/lightOff.png";
+        //         document.getElementById("switch").src = "images/switchOn.png";
+        //     }
+        //     isLightOn = !isLightOn;
+        // }
+    </script>
+
+</body>
+
+</html>
