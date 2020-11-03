@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product managment</title>
+    <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3>Add new product</h3>
+                <input type="text" id="productName">
+                <a href="javascript:;" class="btn btn-success" onclick="addProduct()">Add</a>
+            </div>
+        </div>
+        <div class="row">
+            <h3>Display all product</h3>
+            <div class="col-12">
+                <table>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Product Name</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbProducts">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script/product.js"></script>
+</body>
+
+</html>
