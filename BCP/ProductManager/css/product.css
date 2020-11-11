@@ -72,9 +72,16 @@ td {
 }
 
 tbody>tr:nth-child(even) {
-    background-color: gray;
+    background-color: #c0c0c0;
 }
 
 tbody>tr:hover {
-    background-color: #f1f1f1;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.inputStyle {
+    border: 1px solid yellow;
+    border-radius: 4px;
+    padding: 4px;
 }
